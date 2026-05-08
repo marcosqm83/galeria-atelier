@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | Galería Atelier</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Ir a inicio de Galería Atelier">
+        <img src="img/Logo Atelier sin fondo.png" alt="Logo Galería Atelier" class="navbar-logo">
+        <span>Galería Atelier</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header" id="obras">
+    <div class="container text-center">
+      <h1 class="mt-4 mb-3">Colección de Obras de Arte</h1>
+      <p class="lead mx-auto">Explora nuestras obras seleccionadas para ti.</p>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" aria-label="Galería de obras">
+      <div class="col">
+        <article class="art-card h-100 gallery-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#lightboxObras" data-bs-slide-to="0" aria-label="Ampliar Almendro en flor">
+          <div class="gallery-frame">
+            <img src="img/almendro_floreado.jpg" class="gallery-img" alt="Almendro en flor de Vincent Van Gogh">
+            <span class="gallery-overlay">Ampliar</span>
+          </div>
+          <div class="card-body p-4">
+            <h2 class="h5">Almendro en flor</h2>
+            <p class="art-meta">Artista: Vincent Van Gogh (1853 - 1890)</p>
+            <p class="art-meta">Año: 1890</p>
+            <p class="art-meta">Tamaño: 92 x 73 cms</p>
+            <p class="art-meta">Técnica: Óleo sobre lienzo</p>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="art-card h-100 gallery-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#lightboxObras" data-bs-slide-to="1" aria-label="Ampliar El caminante sobre el mar de niebla">
+          <div class="gallery-frame">
+            <img src="img/caminante.jpg" class="gallery-img" alt="El caminante sobre el mar de niebla de Caspar David Friedrich">
+            <span class="gallery-overlay">Ampliar</span>
+          </div>
+          <div class="card-body p-4">
+            <h2 class="h5">El caminante sobre el mar de niebla</h2>
+            <p class="art-meta">Artista: Caspar David Friedrich (1774 - 1840)</p>
+            <p class="art-meta">Año: 1817</p>
+            <p class="art-meta">Tamaño: 75 x 95 cms</p>
+            <p class="art-meta">Técnica: Óleo sobre lienzo</p>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="art-card h-100 gallery-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#lightboxObras" data-bs-slide-to="2" aria-label="Ampliar Mujer con abanico">
+          <div class="gallery-frame">
+            <img src="img/mujer_abanico.jpg" class="gallery-img" alt="Mujer con abanico de Gustav Klimt">
+            <span class="gallery-overlay">Ampliar</span>
+          </div>
+          <div class="card-body p-4">
+            <h2 class="h5">Mujer con abanico</h2>
+            <p class="art-meta">Artista: Gustav Klimt (1862 - 1918)</p>
+            <p class="art-meta">Año: 1917/1918</p>
+            <p class="art-meta">Tamaño: 100 x 100 cms</p>
+            <p class="art-meta">Técnica: Óleo sobre lienzo</p>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="art-card h-100 gallery-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#lightboxObras" data-bs-slide-to="3" aria-label="Ampliar Terraza de café por la noche">
+          <div class="gallery-frame">
+            <img src="img/terraza_de_cafe.jpg" class="gallery-img" alt="Terraza de café por la noche de Vincent Van Gogh">
+            <span class="gallery-overlay">Ampliar</span>
+          </div>
+          <div class="card-body p-4">
+            <h2 class="h5">Terraza de café por la noche</h2>
+            <p class="art-meta">Artista: Vincent Van Gogh (1853 - 1890)</p>
+            <p class="art-meta">Año: 1888</p>
+            <p class="art-meta">Tamaño: 61 x 81 cms</p>
+            <p class="art-meta">Técnica: Óleo sobre lienzo</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="modal fade" id="lightboxObras" tabindex="-1" aria-labelledby="lightboxTitulo" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content lightbox-content">
+          <div class="modal-header border-0 px-4 px-md-5 pt-4">
+            <div>
+              <p class="lightbox-kicker mb-1">Galería Atelier</p>
+              <h2 class="modal-title h4" id="lightboxTitulo">Vista ampliada de obras</h2>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center">
+            <div id="carouselObras" class="carousel slide w-100" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <figure class="lightbox-figure">
+                    <img src="img/almendro_floreado.jpg" class="lightbox-img" alt="Almendro en flor de Vincent Van Gogh ampliado">
+                    <figcaption class="lightbox-caption">
+                      <strong>Almendro en flor</strong><span>Vincent Van Gogh · 1890 · Óleo sobre lienzo</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="lightbox-figure">
+                    <img src="img/caminante.jpg" class="lightbox-img" alt="El caminante sobre el mar de niebla ampliado">
+                    <figcaption class="lightbox-caption">
+                      <strong>El caminante sobre el mar de niebla</strong><span>Caspar David Friedrich · 1817 · Óleo sobre lienzo</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="lightbox-figure">
+                    <img src="img/mujer_abanico.jpg" class="lightbox-img" alt="Mujer con abanico de Gustav Klimt ampliada">
+                    <figcaption class="lightbox-caption">
+                      <strong>Mujer con abanico</strong><span>Gustav Klimt · 1917/1918 · Óleo sobre lienzo</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="lightbox-figure">
+                    <img src="img/terraza_de_cafe.jpg" class="lightbox-img" alt="Terraza de café por la noche ampliada">
+                    <figcaption class="lightbox-caption">
+                      <strong>Terraza de café por la noche</strong><span>Vincent Van Gogh · 1888 · Óleo sobre lienzo</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <button class="carousel-control-prev lightbox-control" type="button" data-bs-target="#carouselObras" data-bs-slide="prev" aria-label="Obra anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next lightbox-control" type="button" data-bs-target="#carouselObras" data-bs-slide="next" aria-label="Obra siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+              <div class="carousel-indicators lightbox-indicators">
+                <button type="button" data-bs-target="#carouselObras" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Almendro en flor"></button>
+                <button type="button" data-bs-target="#carouselObras" data-bs-slide-to="1" aria-label="El caminante sobre el mar de niebla"></button>
+                <button type="button" data-bs-target="#carouselObras" data-bs-slide-to="2" aria-label="Mujer con abanico"></button>
+                <button type="button" data-bs-target="#carouselObras" data-bs-slide-to="3" aria-label="Terraza de café por la noche"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p>Todos los derechos reservados. 2026.</p>
+      <a href="#obras" class="back-top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const lightbox = document.getElementById('lightboxObras');
+    if (lightbox) {
+      lightbox.addEventListener('show.bs.modal', event => {
+        const trigger = event.relatedTarget;
+        const slideIndex = trigger?.getAttribute('data-bs-slide-to') || 0;
+        const carouselElement = document.getElementById('carouselObras');
+        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, { interval: false });
+        carousel.to(Number(slideIndex));
+      });
+    }
+  </script>
+</body>
+</html>
